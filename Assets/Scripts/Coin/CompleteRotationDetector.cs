@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class CompleteRotationDetector : MonoBehaviour
 {
+    [SerializeField] float rotationValue;
     float previousAngle, currentAngle;
-    float rotationValue;
     public float RotationValue
     {
         get { return rotationValue; }
