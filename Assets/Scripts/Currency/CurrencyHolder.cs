@@ -5,6 +5,20 @@ using UnityEngine;
 
 public class CurrencyHolder : MonoBehaviour
 {
+    public static CurrencyHolder instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
+
+
     [SerializeField] float currentValue;
     public float CurrentValue => currentValue;
 

@@ -8,13 +8,11 @@ using System;
 public class CurrencyValueDisplay : MonoBehaviour
 {
     TextMeshProUGUI text;
-    CurrencyHolder currencyHolder;
     // Start is called before the first frame update
     void Start()
     {
         text = GetComponent<TextMeshProUGUI>();
-        currencyHolder = FindObjectOfType<CurrencyHolder>();
-        currencyHolder.OnValueChanged += DisplayValue;
+        CurrencyHolder.instance.OnValueChanged += DisplayValue;
     }
 
     private void DisplayValue(float value)

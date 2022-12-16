@@ -7,9 +7,8 @@ public class FanUpgrader : AbstractUpgrader
     AutoSpinner fan;
 
     // Start is called before the first frame update
-    protected override void Start()
+    void Start()
     {
-        base.Start();
         fan = GetComponentInChildren<AutoSpinner>();
     }
 

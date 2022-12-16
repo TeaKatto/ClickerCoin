@@ -9,18 +9,16 @@ public class AddMoneyButton : MonoBehaviour
 {
     [SerializeField] float amountToAdd = 1000;
     Button button;
-    CurrencyHolder currencyHolder;
 
     private void Awake()
     {
         button = GetComponent<Button>();
         button.onClick.AddListener(AddMoney);
-        currencyHolder = FindObjectOfType<CurrencyHolder>();
     }
 
     private void AddMoney()
     {
-        currencyHolder.AddAmount(amountToAdd);
+        CurrencyHolder.instance.AddAmount(amountToAdd);
     }
 
     private void OnDestroy()

@@ -11,23 +11,17 @@ public abstract class AbstractUpgrader : MonoBehaviour
     public int UpgradeCost => upgrades[index].cost;
     public bool isMaxLevel => index >= upgrades.Length;
 
-    protected CurrencyHolder currencyHolder;
     protected int index = 0;
-    // Start is called before the first frame update
-    protected virtual void Start()
-    {
-        currencyHolder = FindObjectOfType<CurrencyHolder>();
-    }
 
     protected abstract void Upgrade(Upgrade upgrade);
 
     public virtual void TryUpgrade()
     {
         if (isMaxLevel) return;
-        if (currencyHolder.CurrentValue > upgrades[index].cost)
+        if (CurrencyHolder.instance.CurrentValue > upgrades[index].cost)
         {
             Upgrade(upgrades[index]);
-            currencyHolder.ReduceAmount(upgrades[index].cost);  // pay for the upgrade
+            CurrencyHolder.instance.ReduceAmount(upgrades[index].cost);  // pay for the upgrade
             index++;
         }
     }

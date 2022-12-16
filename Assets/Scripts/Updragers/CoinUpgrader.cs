@@ -8,9 +8,8 @@ public class CoinUpgrader : AbstractUpgrader
     CompleteRotationDetector rotationDetector;
     
     // Start is called before the first frame update
-    protected override void Start()
+    void Start()
     {
-        base.Start();
         rotationDetector = FindObjectOfType<CompleteRotationDetector>();
     }
 
