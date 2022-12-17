@@ -40,6 +40,7 @@ public class CurrencyHolder : MonoBehaviour
         if (amount > currentValue)
             return false;
 
+        AudioManager.instance.Play("purchase");
         currentValue -= amount;
         OnValueChanged?.Invoke(currentValue);
         return true;
