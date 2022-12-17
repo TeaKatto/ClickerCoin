@@ -8,6 +8,8 @@ public class CoinDropper : MonoBehaviour
     public float dropValue;
 
     CompleteRotationDetector rotationDetector;
+
+    public event Action<float> OnMoneyEarned;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,9 @@ public class CoinDropper : MonoBehaviour
 
     private void GainMoney(float multiplier)
     {
-        CurrencyHolder.instance.AddAmount(dropValue * multiplier);
+        float moneyEarned = dropValue * multiplier;
+        CurrencyHolder.instance.AddAmount(moneyEarned);
+        OnMoneyEarned?.Invoke(moneyEarned);
     }
 
 }
