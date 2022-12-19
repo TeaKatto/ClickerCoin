@@ -357,7 +357,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5054127185613376143}
-  - component: {fileID: 5979508378181385700}
+  - component: {fileID: 641246109}
+  - component: {fileID: 641246110}
   m_Layer: 0
   m_Name: FanWithAnim
   m_TagString: Untagged
@@ -372,7 +373,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5577722746329174069}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -62.132496, y: 2.953739, z: -154.20384}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -383,22 +384,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &5979508378181385700
-Animation:
+--- !u!114 &641246109
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5577722746329174069}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: d54aa4dee75753e4c995898f88b535cb, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: d54aa4dee75753e4c995898f88b535cb, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c49617afdde7bd9409616099e6a7c455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinningForce: 0
+--- !u!114 &641246110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5577722746329174069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b3e0231f58f39e459ca9c5c1590a727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fanBlades: {fileID: 2764256449569344530}
+  speedIncrements: 150
+  rotation: {x: 0, y: 0, z: 0}
 --- !u!1 &6620411562546989291
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,7 +698,7 @@ Transform:
   - {fileID: 8359055307990070478}
   m_Father: {fileID: 5054127185613376143}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -0.07159532, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 174.54944, y: 0, z: 0}
 --- !u!33 &2216918619488970176
 MeshFilter:
   m_ObjectHideFlags: 0
