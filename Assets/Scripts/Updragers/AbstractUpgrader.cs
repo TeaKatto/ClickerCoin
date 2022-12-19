@@ -21,7 +21,7 @@ public abstract class AbstractUpgrader : MonoBehaviour
     public virtual void TryUpgrade()
     {
         if (isMaxLevel) return;
-        if (CurrencyHolder.instance.CurrentValue > upgrades[index].cost)
+        if (CurrencyHolder.instance.CurrentValue >= upgrades[index].cost)
         {
             Upgrade(upgrades[index]);
             CurrencyHolder.instance.ReduceAmount(upgrades[index].cost);  // pay for the upgrade
