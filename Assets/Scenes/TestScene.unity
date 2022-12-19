@@ -3899,7 +3899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4151958412020747818, guid: dc95f9cab7a69994f934cf6c89173265, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -25.68
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4151958412020747818, guid: dc95f9cab7a69994f934cf6c89173265, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5011,7 +5011,6 @@ MonoBehaviour:
   - cost: 5000
     visualUpgrade: {fileID: 7162031276697113510, guid: 272855c1dfa26864693a4273d30def2a, type: 3}
     value: 200
-  particleSystem: {fileID: 0}
 --- !u!114 &2066591398
 MonoBehaviour:
   m_ObjectHideFlags: 0

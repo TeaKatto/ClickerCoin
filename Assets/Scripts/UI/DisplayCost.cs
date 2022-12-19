@@ -21,7 +21,7 @@ public class DisplayCost : MonoBehaviour
     private void UpdatePrice()
     {
         if (upgrader.isMaxLevel)
-            text.text = "Max level";
+            text.text = "Max";
 
         else
             text.text = "$" + upgrader.UpgradeCost.ToString();
