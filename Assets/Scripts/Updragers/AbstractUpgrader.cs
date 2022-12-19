@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,8 @@ public abstract class AbstractUpgrader : MonoBehaviour
     public int UpgradeCost => upgrades[index].cost;
     public bool isMaxLevel => index >= upgrades.Length;
 
+    public event Action OnUpgraded;
+
     protected int index = 0;
 
     protected abstract void Upgrade(Upgrade upgrade);
@@ -23,6 +26,7 @@ public abstract class AbstractUpgrader : MonoBehaviour
             Upgrade(upgrades[index]);
             CurrencyHolder.instance.ReduceAmount(upgrades[index].cost);  // pay for the upgrade
             index++;
+            OnUpgraded?.Invoke();
         }
     }
     protected void ReplaceToNewGameObject(GameObject upgradedObject)
