@@ -842,7 +842,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433835727}
-  m_LocalRotation: {x: 0.30090624, y: -0.6348906, z: 0.29501942, w: 0.64755917}
+  m_LocalRotation: {x: 0.3009062, y: -0.6348907, z: 0.2950195, w: 0.6475591}
   m_LocalPosition: {x: 69.2, y: 63.1, z: 65.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -913,7 +913,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 463231009}
-  m_LocalRotation: {x: -0.00486438, y: 0.9024321, z: 0.010192555, w: 0.4306842}
+  m_LocalRotation: {x: -0.00486438, y: 0.902432, z: 0.010192556, w: 0.43068418}
   m_LocalPosition: {x: -79.08325, y: -17.882431, z: 132.93843}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1223,17 +1223,24 @@ MonoBehaviour:
   sounds:
   - name: coin
     clip: {fileID: 8300000, guid: a7005cf9c85c0d541b6a1a36a22283b8, type: 3}
-    volume: 0.3
+    volume: 1
     pitch: 1
     loop: 0
     isSFX: 1
     source: {fileID: 0}
   - name: purchase
     clip: {fileID: 8300000, guid: d36bf6651bcc81b4a8cedd677baac074, type: 3}
-    volume: 0.3
+    volume: 1
     pitch: 1
     loop: 0
     isSFX: 1
+    source: {fileID: 0}
+  - name: ThemeMusic
+    clip: {fileID: 8300000, guid: 99cbff966409c684a87c22fb2f3c63e8, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 1
+    isSFX: 0
     source: {fileID: 0}
 --- !u!4 &623065851
 Transform:
