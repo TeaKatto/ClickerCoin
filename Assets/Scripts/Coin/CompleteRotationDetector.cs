@@ -26,7 +26,10 @@ public class CompleteRotationDetector : MonoBehaviour
     {
         currentAngle = transform.rotation.eulerAngles.y;
         if (previousAngle > currentAngle) // when the angle drops from 360 to 0
+        {
             OnRotationComplete?.Invoke(rotationValue);
+            AudioManager.instance.Play("coin");
+        }
 
         previousAngle = currentAngle;
     }
