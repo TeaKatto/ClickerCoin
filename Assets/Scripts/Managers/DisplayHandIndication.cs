@@ -19,6 +19,8 @@ public class DisplayHandIndication : MonoBehaviour
     private void DisableIndication()
     {
         Destroy(handIndication);
+        upgradeButton.onClick.RemoveListener(DisableIndication);
+        CurrencyHolder.instance.OnValueChanged -= checkValue;
     }
 
     private void checkValue(float value)
