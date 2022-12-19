@@ -24,7 +24,7 @@ public class DisplayCost : MonoBehaviour
             text.text = "Max level";
 
         else
-            text.text = "price : $" + upgrader.UpgradeCost.ToString();
+            text.text = "$" + upgrader.UpgradeCost.ToString();
     }
 
 }
